@@ -61,9 +61,7 @@ def get_headers() -> dict:
 def validate_configuration() -> list[str]:
     errors = []
 
-    if not ENV_FILE.exists():
-        errors.append(f"The .env file was not found at: {ENV_FILE}")
-
+  
     if not LYZR_API_KEY:
         errors.append("LYZR_API_KEY is missing from the environment.")
 
